@@ -135,6 +135,8 @@ public interface ConfigurationOptions {
     int ES_DEFAULT_MAX_DOCS_PER_PARTITION = 100000;
     String ES_INPUT_JSON = "es.input.json";
     String ES_INPUT_JSON_DEFAULT = "no";
+    String ES_INPUT_SHARDS_AS_PARTITION = "es.input.shards.as.partition";
+    String ES_INPUT_SHARDS_AS_PARTITION_DEFAULT = "yes";
 
     /** Index settings */
     String ES_INDEX_AUTO_CREATE = "es.index.auto.create";

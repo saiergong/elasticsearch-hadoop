@@ -521,6 +521,10 @@ public abstract class Settings {
         return Integer.parseInt(getProperty(ES_MAX_DOCS_PER_PARTITION, Integer.toString(ES_DEFAULT_MAX_DOCS_PER_PARTITION)));
     }
 
+    public boolean getInputShardsAsPartition(){
+        return Booleans.parseBoolean(getProperty(ES_INPUT_SHARDS_AS_PARTITION, ES_INPUT_SHARDS_AS_PARTITION_DEFAULT));
+    }
+
     public boolean getReadMetadata() {
         return Booleans.parseBoolean(getProperty(ES_READ_METADATA, ES_READ_METADATA_DEFAULT));
     }

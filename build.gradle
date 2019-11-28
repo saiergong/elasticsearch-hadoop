@@ -287,6 +287,9 @@ allprojects { project ->
 
     javadoc {
         ext.srcDir = file("${rootProject}/docs/src/api")
+	
+	options.jFlags('-DproxyHost=' + System.properties['http.proxyHost'],
+            '-DproxyPort=' + System.properties['http.proxyPort']);
     
         configure(options) {
             //stylesheetFile = file("${rootProject.projectDir}/docs/src/api/javadoc.css")
